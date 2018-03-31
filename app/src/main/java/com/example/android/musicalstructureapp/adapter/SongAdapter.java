@@ -66,12 +66,13 @@ public class SongAdapter extends ArrayAdapter<Song> {
         LinearLayout mainContainerLayout = listItemView.findViewById(R.id.main_container);
         // Get the directory with song name from the current Song object and
         // set this as tag on the main_container layout
-        mainContainerLayout.setTag(currentSong.getSongDirectory()+"/"+currentSong.getSongName()+".mp3");
+        mainContainerLayout.setTag(currentSong.getSongDirectory()+"/"+currentSong.getSongCounter()+" - "+currentSong.getSongName()+".mp3");
 
         // Find the TextView in the list_item.xml layout with the song name
         TextView songNameTextView = (TextView) listItemView.findViewById(R.id.song_name);
         // Get the song name from the current Song object and
         // set this text on the song name TextView
+        songNameTextView.setTag(currentSong.getSongName());
         songNameTextView.setText(currentSong.getSongName());
 
         // Find the TextView in the song_list_item.xml layout with the song name

@@ -64,6 +64,7 @@ public class SongPlayerActivity extends AppCompatActivity {
     private String[] musicFiles = null;
 
     //Variables to keep the song album image
+    private String songPath;
     private Bitmap songAlbumImage;
     private byte[] songAlbumImageByteArray;
 
@@ -79,6 +80,7 @@ public class SongPlayerActivity extends AppCompatActivity {
         //Get data set by previous activity
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+            songPath = extras.getString(Constants.SONG_PATH);
             songAlbumImageByteArray = extras.getByteArray(Constants.SONG_ALBUM_IMAGE);
             songAlbumImage = BitmapFactory.decodeByteArray(songAlbumImageByteArray,0, songAlbumImageByteArray.length);
 
@@ -95,15 +97,14 @@ public class SongPlayerActivity extends AppCompatActivity {
         currentTime = (TextView)findViewById(R.id.current_time);
         totalTime = (TextView)findViewById(R.id.total_time);
         songName = (TextView)findViewById(R.id.song_name);
-        songName.setText("test.mp3");
+        songName.setText(extras.getString(Constants.SONG_NAME)+".mp3");
 
         seekBar = (SeekBar)findViewById(R.id.seek_bar);
         seekBar.setClickable(false);
 
         try {
             mediaPlayer = new MediaPlayer();
-//TODO use proper song
-            AssetFileDescriptor afd = this.getAssets().openFd("music/Country/Florida Georgia Line/Anything Goes/01 - Anything Goes.mp3");
+            AssetFileDescriptor afd = this.getAssets().openFd(songPath);
             mediaPlayer.setDataSource(
                     afd.getFileDescriptor(),
                     afd.getStartOffset(),
