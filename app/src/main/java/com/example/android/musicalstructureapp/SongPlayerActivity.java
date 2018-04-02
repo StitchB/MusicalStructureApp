@@ -60,7 +60,7 @@ public class SongPlayerActivity extends AppCompatActivity {
     private SeekBar seekBar;
     private TextView currentTime, totalTime, songName;
 
-    private MediaPlayer mediaPlayer = null;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
     private String[] musicFiles = null;
 
     //Variables to keep the song album image
@@ -103,7 +103,6 @@ public class SongPlayerActivity extends AppCompatActivity {
         seekBar.setClickable(false);
 
         try {
-            mediaPlayer = new MediaPlayer();
             AssetFileDescriptor afd = this.getAssets().openFd(songPath);
             mediaPlayer.setDataSource(
                     afd.getFileDescriptor(),
@@ -225,4 +224,11 @@ public class SongPlayerActivity extends AppCompatActivity {
             myHandler.postDelayed(this,100);
         }
     };
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        mediaPlayer.pause();
+    }
 }
