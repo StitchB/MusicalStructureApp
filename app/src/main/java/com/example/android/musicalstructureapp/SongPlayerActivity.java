@@ -25,6 +25,8 @@ import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import android.app.Activity;
@@ -74,6 +76,9 @@ public class SongPlayerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        // Hide action bar
+        hideActionBar();
+        
         // Set the content of the activity to use the activity_song_player.xml layout file
         setContentView(R.layout.activity_song_player);
 
@@ -230,5 +235,14 @@ public class SongPlayerActivity extends AppCompatActivity {
         super.onPause();
 
         mediaPlayer.pause();
+    }
+
+    /**
+     * Hide action bar
+     */
+    private void hideActionBar() {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }

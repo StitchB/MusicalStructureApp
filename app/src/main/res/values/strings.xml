@@ -2,6 +2,8 @@
     <!-- Title for the application. [CHAR LIMIT=12] -->
     <string name="app_name">MusicalStructureApp</string>
 
+    <string name="background">Main Background</string>
+
     <string name="tab_text_1">Songs</string>
     <string name="tab_text_2">Albums</string>
     <string name="tab_text_3">Artists</string>
