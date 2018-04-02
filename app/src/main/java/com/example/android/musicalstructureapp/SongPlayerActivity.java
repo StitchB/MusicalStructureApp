@@ -55,8 +55,8 @@ public class SongPlayerActivity extends AppCompatActivity {
     private double finalTime = 0;
 
     private Handler myHandler = new Handler();;
-    private int forwardTime = 5000;
-    private int backwardTime = 5000;
+    private int forwardTime = 5100;
+    private int backwardTime = 5100;
     private SeekBar seekBar;
     private TextView currentTime, totalTime, songName;
 
@@ -89,7 +89,7 @@ public class SongPlayerActivity extends AppCompatActivity {
             songAlbumImageView.setImageBitmap(songAlbumImage);
         }
 
-        //Start setting up media player elemnts
+        //Start setting up media player elements
         forwardButton = (Button)findViewById(R.id.forward_button);
         playPauseButton = (Button)findViewById(R.id.play_pause_button);
         rewindButton = (Button)findViewById(R.id.rewind_button);
@@ -121,7 +121,7 @@ public class SongPlayerActivity extends AppCompatActivity {
 
             currentTime.setText(String.format("%d min, %d sec",
                     TimeUnit.MILLISECONDS.toMinutes((long) startTime),
-                    TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
+                    TimeUnit.MILLISECONDS.toSeconds((long) startTime+1000) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long)
                                     startTime)))
             );
@@ -177,7 +177,7 @@ public class SongPlayerActivity extends AppCompatActivity {
 
                     currentTime.setText(String.format("%d min, %d sec",
                             TimeUnit.MILLISECONDS.toMinutes((long) startTime),
-                            TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
+                            TimeUnit.MILLISECONDS.toSeconds((long) startTime+1000) -
                                     TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes((long)
                                             startTime)))
                     );
@@ -217,7 +217,7 @@ public class SongPlayerActivity extends AppCompatActivity {
             startTime = mediaPlayer.getCurrentPosition();
             currentTime.setText(String.format("%d min, %d sec",
                     TimeUnit.MILLISECONDS.toMinutes((long) startTime),
-                    TimeUnit.MILLISECONDS.toSeconds((long) startTime) -
+                    TimeUnit.MILLISECONDS.toSeconds((long) startTime+1000) -
                             TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.
                                     toMinutes((long) startTime)))
             );
