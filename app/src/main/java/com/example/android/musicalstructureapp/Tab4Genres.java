@@ -178,7 +178,7 @@ public class Tab4Genres extends Fragment {
                             break;
                     }
                 } catch (IOException e) {
-                    Log.e("test", e.getMessage());
+                    Log.e("IOException", e.getMessage());
                 }
 
                 // Create an {@link ArrayAdapter}, whose data source is a list of Strings.

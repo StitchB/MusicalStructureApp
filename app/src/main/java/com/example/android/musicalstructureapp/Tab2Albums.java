@@ -64,8 +64,7 @@ public class Tab2Albums extends Fragment {
             album_drawable = Drawable.createFromStream(getContext().getAssets().open("music/Rock/Queen/The Miracle/cover.jpg"), null);
             albums.add(new Album("The Miracle", "Queen", album_drawable));
         } catch (IOException e) {
-            Log.e("test", e.getMessage());
-            //this.getLocalClassName().toString() could be replaced with any (string) tag
+            Log.e("IOException", e.getMessage());
         }
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings.
@@ -203,7 +202,7 @@ public class Tab2Albums extends Fragment {
                             break;
                     }
                 } catch (IOException e) {
-                    Log.e("test", e.getMessage());
+                    Log.e("IOException", e.getMessage());
                 }
 
                 // Create an {@link ArrayAdapter}, whose data source is a list of Strings.

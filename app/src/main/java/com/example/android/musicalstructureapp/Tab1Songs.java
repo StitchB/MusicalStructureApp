@@ -126,7 +126,7 @@ public class Tab1Songs extends Fragment {
             songs.add(new Song("05", "music/Rock/Queen/The Miracle", "The Invisible Man", "Queen ", song_drawable));
             songs.add(new Song("06", "music/Rock/Queen/The Miracle", "Breakthru", "Queen ", song_drawable));
         } catch (IOException e) {
-            Log.e("test", e.getMessage());
+            Log.e("IOException", e.getMessage());
         }
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings.

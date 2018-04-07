@@ -60,7 +60,7 @@ public class Tab3Artists extends Fragment {
             artist_drawable = Drawable.createFromStream(getContext().getAssets().open("music/Rock/Queen/artist.jpg"), null);
             artists.add(new Artist("Queen", artist_drawable));
         } catch (IOException e) {
-            Log.e("test", e.getMessage());
+            Log.e("IOException", e.getMessage());
         }
 
         // Create an {@link ArrayAdapter}, whose data source is a list of Strings.
@@ -194,7 +194,7 @@ public class Tab3Artists extends Fragment {
                             break;
                     }
                 } catch (IOException e) {
-                    Log.e("test", e.getMessage());
+                    Log.e("IOException", e.getMessage());
                 }
 
                 // Create an {@link ArrayAdapter}, whose data source is a list of Strings.
