@@ -20,9 +20,9 @@ public class Album {
     /**
      * Create a new Album object.
      *
-     * @param albumName is the album name
+     * @param albumName   is the album name
      * @param albumAuthor is the album author
-     * @param albumImage is the album image
+     * @param albumImage  is the album image
      */
     public Album(String albumName, String albumAuthor, Drawable albumImage) {
         mAlbumName = albumName;

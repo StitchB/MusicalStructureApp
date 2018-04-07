@@ -1,5 +1,4 @@
 <resources>
-
     <!-- Base application theme. -->
     <style name="AppTheme">
         <!-- Customize your theme here. -->
@@ -17,8 +16,9 @@
 
     <style name="SongAlbumImage">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_height">135dp</item>
         <item name="android:layout_centerHorizontal">true</item>
+        <item name="android:paddingTop">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
     </style>

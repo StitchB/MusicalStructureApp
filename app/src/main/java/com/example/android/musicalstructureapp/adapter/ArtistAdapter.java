@@ -16,9 +16,9 @@ import com.example.android.musicalstructureapp.R;
 import java.util.ArrayList;
 
 /*
-* {@link ArtistAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
-* based on a data source, which is a list of {@link Artist} objects.
-* */
+ * {@link ArtistAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
+ * based on a data source, which is a list of {@link Artist} objects.
+ * */
 public class ArtistAdapter extends ArrayAdapter<Artist> {
 
     /**
@@ -60,13 +60,13 @@ public class ArtistAdapter extends ArrayAdapter<Artist> {
         Artist currentArtist = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the artist name
-        TextView artistNameTextView = (TextView) listItemView.findViewById(R.id.artist_name);
+        TextView artistNameTextView = listItemView.findViewById(R.id.artist_name);
         // Get the artist name from the current Artist object and
         // set this text on the artist name TextView
         artistNameTextView.setText(currentArtist.getArtistName());
 
         // Find the ImageView in the artist_list_item.xml layout with the ID artist_image
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.artist_image);
+        ImageView iconView = listItemView.findViewById(R.id.artist_image);
         // Get the image resource ID from the current Artist object and
         // set the image to iconView
         iconView.setImageDrawable(currentArtist.getArtistImage());

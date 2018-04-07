@@ -16,9 +16,9 @@ import com.example.android.musicalstructureapp.R;
 import java.util.ArrayList;
 
 /*
-* {@link GenreAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
-* based on a data source, which is a list of {@link Genre} objects.
-* */
+ * {@link GenreAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
+ * based on a data source, which is a list of {@link Genre} objects.
+ * */
 public class GenreAdapter extends ArrayAdapter<Genre> {
 
     /**
@@ -27,7 +27,7 @@ public class GenreAdapter extends ArrayAdapter<Genre> {
      * to populate into the lists.
      *
      * @param context The current context. Used to inflate the layout file.
-     * @param genres   A List of genres objects to display in a list
+     * @param genres  A List of genres objects to display in a list
      */
     public GenreAdapter(Activity context, ArrayList<Genre> genres) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
@@ -60,13 +60,13 @@ public class GenreAdapter extends ArrayAdapter<Genre> {
         Genre currentGenre = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the genre name
-        TextView genreNameTextView = (TextView) listItemView.findViewById(R.id.genre_name);
+        TextView genreNameTextView = listItemView.findViewById(R.id.genre_name);
         // Get the genre name from the current Genre object and
         // set this text on the genre name TextView
         genreNameTextView.setText(currentGenre.getGenreName());
 
         // Find the ImageView in the genre_list_item.xml layout with the ID genre_image
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.genre_image);
+        ImageView iconView = listItemView.findViewById(R.id.genre_image);
         // Get the image resource ID from the current Genre object and
         // set the image to iconView
         iconView.setImageDrawable(currentGenre.getGenreImage());

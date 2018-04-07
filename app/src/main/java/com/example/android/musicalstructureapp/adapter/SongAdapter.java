@@ -18,9 +18,9 @@ import com.example.android.musicalstructureapp.Song;
 import java.util.ArrayList;
 
 /*
-* {@link SongAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
-* based on a data source, which is a list of {@link Song} objects.
-* */
+ * {@link SongAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
+ * based on a data source, which is a list of {@link Song} objects.
+ * */
 public class SongAdapter extends ArrayAdapter<Song> {
 
     /**
@@ -66,23 +66,23 @@ public class SongAdapter extends ArrayAdapter<Song> {
         LinearLayout mainContainerLayout = listItemView.findViewById(R.id.main_container);
         // Get the directory with song name from the current Song object and
         // set this as tag on the main_container layout
-        mainContainerLayout.setTag(currentSong.getSongDirectory()+"/"+currentSong.getSongCounter()+" - "+currentSong.getSongName()+".mp3");
+        mainContainerLayout.setTag(currentSong.getSongDirectory() + "/" + currentSong.getSongCounter() + " - " + currentSong.getSongName() + ".mp3");
 
         // Find the TextView in the list_item.xml layout with the song name
-        TextView songNameTextView = (TextView) listItemView.findViewById(R.id.song_name);
+        TextView songNameTextView = listItemView.findViewById(R.id.song_name);
         // Get the song name from the current Song object and
         // set this text on the song name TextView
         songNameTextView.setTag(currentSong.getSongName());
         songNameTextView.setText(currentSong.getSongName());
 
         // Find the TextView in the song_list_item.xml layout with the song name
-        TextView authorNameTextView = (TextView) listItemView.findViewById(R.id.song_author);
+        TextView authorNameTextView = listItemView.findViewById(R.id.song_author);
         // Get the song name from the current Song object and
         // set this text on the song name TextView
         authorNameTextView.setText(currentSong.getSongAuthor());
 
         // Find the ImageView in the list_item.xml layout with the ID song_album_image
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.song_album_image);
+        ImageView iconView = listItemView.findViewById(R.id.song_album_image);
         // Get the image resource ID from the current Song object and
         // set the image to iconView
         iconView.setImageDrawable(currentSong.getSongAlbumImage());

@@ -16,9 +16,9 @@ import com.example.android.musicalstructureapp.R;
 import java.util.ArrayList;
 
 /*
-* {@link AlbumAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
-* based on a data source, which is a list of {@link Album} objects.
-* */
+ * {@link AlbumAdapter} is an {@link ArrayAdapter} that can provide the layout for each list
+ * based on a data source, which is a list of {@link Album} objects.
+ * */
 public class AlbumAdapter extends ArrayAdapter<Album> {
 
     /**
@@ -27,7 +27,7 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
      * to populate into the lists.
      *
      * @param context The current context. Used to inflate the layout file.
-     * @param albums   A List of albums objects to display in a list
+     * @param albums  A List of albums objects to display in a list
      */
     public AlbumAdapter(Activity context, ArrayList<Album> albums) {
         // Here, we initialize the ArrayAdapter's internal storage for the context and the list.
@@ -60,19 +60,19 @@ public class AlbumAdapter extends ArrayAdapter<Album> {
         Album currentAlbum = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the album name
-        TextView albumNameTextView = (TextView) listItemView.findViewById(R.id.album_name);
+        TextView albumNameTextView = listItemView.findViewById(R.id.album_name);
         // Get the genre name from the current Genre object and
         // set this text on the genre name TextView
         albumNameTextView.setText(currentAlbum.getAlbumName());
 
         // Find the TextView in the list_item.xml layout with the album name
-        TextView authorNameTextView = (TextView) listItemView.findViewById(R.id.album_author);
+        TextView authorNameTextView = listItemView.findViewById(R.id.album_author);
         // Get the genre name from the current Genre object and
         // set this text on the genre name TextView
         authorNameTextView.setText(currentAlbum.getAlbumAuthor());
 
         // Find the ImageView in the album_list_item.xml layout with the ID album_image
-        ImageView iconView = (ImageView) listItemView.findViewById(R.id.album_image);
+        ImageView iconView = listItemView.findViewById(R.id.album_image);
         // Get the image resource ID from the current Album object and
         // set the image to iconView
         iconView.setImageDrawable(currentAlbum.getAlbumImage());

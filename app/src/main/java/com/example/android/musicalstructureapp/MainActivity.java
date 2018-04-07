@@ -58,10 +58,10 @@ public class MainActivity extends AppCompatActivity {
         mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
-        mViewPager = (ViewPager) findViewById(R.id.container);
+        mViewPager = findViewById(R.id.container);
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
 
@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
 
         tabLayout.addOnTabSelectedListener(new TabLayout.ViewPagerOnTabSelectedListener(mViewPager) {
             @Override
-            public void onTabSelected(TabLayout.Tab tab){
+            public void onTabSelected(TabLayout.Tab tab) {
                 super.onTabSelected(tab);
 
                 mSectionsPagerAdapter.notifyDataSetChanged();
@@ -93,7 +93,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             //Return current tab
-            switch(position) {
+            switch (position) {
                 case 0:
                     Tab1Songs tab1 = new Tab1Songs();
                     return tab1;
