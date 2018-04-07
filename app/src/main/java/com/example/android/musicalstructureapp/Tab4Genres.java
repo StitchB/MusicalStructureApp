@@ -15,8 +15,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.example.android.musicalstructureapp.Genre;
-import com.example.android.musicalstructureapp.R;
 import com.example.android.musicalstructureapp.adapter.GenreAdapter;
 import com.example.android.musicalstructureapp.adapter.SongAdapter;
 

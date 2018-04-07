@@ -15,9 +15,6 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 
-import com.example.android.musicalstructureapp.R;
-import com.example.android.musicalstructureapp.Song;
-import com.example.android.musicalstructureapp.SongPlayerActivity;
 import com.example.android.musicalstructureapp.adapter.SongAdapter;
 
 import java.io.ByteArrayOutputStream;
