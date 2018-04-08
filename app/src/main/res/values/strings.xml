@@ -1,6 +1,9 @@
 <resources>
-    <!-- Title for the application. [CHAR LIMIT=12] -->
+    <!-- Title for the application. [CHAR LIMIT=30] -->
     <string name="app_name">Musical Structure App</string>
+
+    <!-- Song Player activity name [CHAR LIMIT=30] -->
+    <string name="song_player_name">Song Player</string>
 
     <!-- Tabs titles [CHAR LIMIT=20] -->
     <string name="tab_text_1">Songs</string>
