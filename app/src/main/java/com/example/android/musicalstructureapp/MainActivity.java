@@ -9,9 +9,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.os.Bundle;
 
-import android.view.Window;
-import android.view.WindowManager;
-
 public class MainActivity extends AppCompatActivity {
 
     /**
@@ -32,9 +29,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        // Hide action bar
-        hideActionBar();
 
         // Set the content of the activity to use the activity_main.xml layout file
         setContentView(R.layout.activity_main);
@@ -107,14 +101,5 @@ public class MainActivity extends AppCompatActivity {
             // Show 4 total pages.
             return 4;
         }
-    }
-
-    /**
-     * Hide action bar
-     */
-    private void hideActionBar() {
-        requestWindowFeature(Window.FEATURE_NO_TITLE);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
 }

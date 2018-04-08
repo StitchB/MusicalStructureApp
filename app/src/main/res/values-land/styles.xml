@@ -1,10 +1,11 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:textColorPrimary">@color/themeTextColor</item>
     </style>
 
     <style name="MainBackground">
@@ -16,11 +17,12 @@
 
     <style name="SongAlbumImage">
         <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">135dp</item>
+        <item name="android:layout_height">95dp</item>
         <item name="android:layout_centerHorizontal">true</item>
         <item name="android:paddingTop">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
         <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingBottom">@dimen/activity_horizontal_margin</item>
     </style>
 
     <style name="TabListView">

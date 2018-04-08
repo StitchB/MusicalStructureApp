@@ -14,7 +14,8 @@
 
     <ImageView
         android:id="@+id/song_album_image"
-        style="@style/SongAlbumImage" />
+        style="@style/SongAlbumImage"
+        android:contentDescription="@string/song_album_image" />
 
     <SeekBar
         android:id="@+id/seek_bar"
@@ -32,7 +33,7 @@
         android:layout_above="@+id/seek_bar"
         android:layout_alignParentStart="true"
         android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:text="0 min, 0 sec"
+        android:text="@string/song_player_min_sec"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <TextView
@@ -42,7 +43,7 @@
         android:layout_above="@+id/seek_bar"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="32dp"
-        android:text=".mp3"
+        android:text="@string/song_player_mp3_extension"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:textColor="#4d88ff" />
 
@@ -53,7 +54,7 @@
         android:layout_above="@+id/seek_bar"
         android:layout_alignParentEnd="true"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:text="0 min, 0 sec"
+        android:text="@string/song_player_min_sec"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 
     <android.support.v7.widget.AppCompatButton

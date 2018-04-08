@@ -8,7 +8,8 @@
 
     <ImageView
         android:id="@+id/song_album_image"
-        style="@style/ListItemImage"/>
+        style="@style/ListItemImage"
+        android:contentDescription="@string/song_album_image" />
 
     <LinearLayout
         style="@style/ListItemWrapper">
